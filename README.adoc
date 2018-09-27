@@ -1,1 +1,43 @@
+:toc:
+
 = Neo4JGraphDB
+
+== Agenda
+
+.Introduction
+
+.Differences NoSQL/GraphSQL & SQL
+
+.Why Neo4J
+
+.Practical
+
+== Introduction
+
+== Differences NoSQL/GraphSQL & SQL
+
+== Why Neo4J
+
+== Practical
+
+=== Install docker image
+
+=== Creation
+
+==== Creating a database
+
+==== Creating an Entity
+
+===== Create attributes
+
+==== Creating a relationship
+
+==== Complex Creation
+
+=== Searching/Matching
+
+==== Search entity
+
+==== More complex queries
+
+==== Shortest Path
