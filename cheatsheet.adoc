@@ -6,5 +6,5 @@
 == READ
 === Read Query Structure
 ..................
-[*[blue]#MATCH WHERE#*]
+*[blue]#MATCH WHERE#*
 === MATCH
