@@ -1,3 +1,0 @@
-= Neo4JGraphDB
-
-Neo4J yeah!
