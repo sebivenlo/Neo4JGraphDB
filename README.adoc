@@ -2,10 +2,11 @@
 
 = Neo4JGraphDB
 
-image::images/neo4jlogo.png[]
+image::images/neo4j_logo.png[]
 
 In this workshop, we want to introduce you to the NOSQL Graph DB Neo4J. +
 To do this, we will introduce you to its basic concepts, its query language and different advantages and uses. +
+Following some short tutorials, you will also get some exercises to complete to get more familiar with the concept and language of Neo4J
 
 == Assignment 1
 
