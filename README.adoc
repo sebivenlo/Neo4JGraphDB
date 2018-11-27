@@ -35,21 +35,20 @@ For help use the cheat sheet (https://github.com/sebivenlo/Neo4JGraphDB/blob/mas
 == Assignment 2
 
 - Open a terminal in the assignment 2 folder
-- execute the following command to run the Neo4J browser: 
+- execute the following command to run the Neo4J browser (Linux + MAC): 
 ..................
 docker run \
    --publish=7474:7474 --publish=7687:7687 \
    --volume=$HOME/(path to current location)/neo4j/data:/data \
    neo4j:latest
 ..................
-Exception for windows:
+Windows:
 ..................
-docker run \
-   --publish=7474:7474 --publish=7687:7687 \
-   --volume=(path to current location)/neo4j/data:/data \
-   neo4j:latest
+docker run --publish=7474:7474 --publish=7687:7687 --volume=(path to current location)/neo4j/data:/data neo4j:latest
 ..................
 - Open your browser and go to localhost:7474
+
+- Password: 1234
 
 - Try to create the following Queries:
    
