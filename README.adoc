@@ -1,0 +1,42 @@
+:toc:
+
+= Neo4JGraphDB
+
+image::images/neo4jlogo.png[]
+
+In this workshop, we want to introduce you to the NOSQL Graph DB Neo4J. +
+To do this, we will introduce you to its basic concepts, its query language and different advantages and uses. +
+
+== Assignment 1
+
+- Open a terminal
+- execute the following command to run the Neo4J browser:
+..................
+docker run \
+   --publish=7474:7474 --publish=7687:7687 \
+   neo4j:latest
+..................
+- open a browser and go to localhost:7474
+- enter "neo4j" as the password
+- choose a new password (not needed again)
+
+
+== Assignment 2
+
+- Open a terminal in the assignment 2 folder
+- execute the following command to run the Neo4J browser: 
+..................
+docker run \
+   --publish=7474:7474 --publish=7687:7687 \
+   --volume=$HOME/(path to current location)/neo4j/data:/data \
+   neo4j:latest
+..................
+Exception for windows:
+..................
+docker run \
+   --publish=7474:7474 --publish=7687:7687 \
+   --volume=(path to current location)/neo4j/data:/data \
+   neo4j:latest
+..................
+- Open your browser and go to localhost:7474
+   
