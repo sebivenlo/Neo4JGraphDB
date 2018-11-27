@@ -50,6 +50,8 @@ docker run \
    neo4j:latest
 ..................
 - Open your browser and go to localhost:7474
+
+- Try to create the following Queries:
    
 === Queries
 
