@@ -56,7 +56,7 @@ docker run \
 === Queries
 
 . Breweries of the United States
-.. Find all the breweries of the United States.
+.. Find all the breweries that are located in the United States.
 
 . Beers in a particular city
 .. Find all the beers & breweries from San Francisco, California.
