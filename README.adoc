@@ -77,3 +77,63 @@ docker run \
 
 - Find all the beers that are brewed in the style "Porter" in the United States.
 
+=== Schema
+
+image::images/beer_schema.png[]
+
+(Beer)
+
+- name: beer name
+
+- abv: alcohol by volume
+
+(Brewery)
+
+- name: brewery name
+
+- address1
+
+- city
+
+- state
+
+- country
+
+- code
+
+- latitude
+
+- longitude
+
+- phone
+
+- website
+
+(Category)
+
+- category
+
+(City)
+
+- city
+
+- state
+
+- country
+
+(State)
+
+- state
+
+(Country)
+
+- country
+
+(Beer) - [:BREWED_AT] → (Brewery)
+
+(Beer) - [:BEER_CATEGORY] → (Category)
+
+(Beer) - [:BEER_STYLE] → (Style)
+
+(Brewery) - [:LOC_CITY] → (City) - [:LOC_STATE] → (State) - [:LOC_COUNTRY] → (Country)
+
