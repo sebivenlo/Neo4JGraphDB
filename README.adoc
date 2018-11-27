@@ -19,7 +19,7 @@ docker run \
 ..................
 - open a browser and go to localhost:7474
 - enter "neo4j" as the password
-- choose a new password (not needed again)
+- choose a new password 
 
 
 == Assignment 2
