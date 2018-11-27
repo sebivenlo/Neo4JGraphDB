@@ -11,7 +11,7 @@ Following some short tutorials, you will also get some exercises to complete to 
 == Assignment 1
 
 - Open a terminal
-- execute the following command to run the Neo4J browser:
+- execute the following command to an empty Neo4j DB:
 ..................
 docker run \
    --publish=7474:7474 --publish=7687:7687 \
@@ -20,6 +20,14 @@ docker run \
 - open a browser and go to localhost:7474
 - enter "neo4j" as the password
 - choose a new password 
+- Create a node of type “Person” with a property name that is set to your name. 
+- Create a node of type “Hobby” with a property name that is set is to something that you like to do (e.g. “Programming”, “Reading”, …). 
+- Create a new relationship between those two nodes called “LIKES”.
+- Create some friends of type “Person” with a property name that have the relationship “FRIENDS” with your own node. 
+- Find all your friends in the database. 
+- Create a friend of a friend for one of your friends (you->friend->foaf) and make him an expert in your hobby.
+- Find someone in your network who can give you tips for your hobby. 
+
 
 
 == Assignment 2
