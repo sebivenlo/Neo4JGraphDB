@@ -28,6 +28,8 @@ docker run \
 - Create a friend of a friend for one of your friends (you->friend->foaf) and make him an expert in your hobby.
 - Find someone in your network who can give you tips for your hobby. 
 
+For help use the cheat sheet.
+
 
 
 == Assignment 2
