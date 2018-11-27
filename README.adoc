@@ -53,29 +53,23 @@ docker run \
    
 === Queries
 
-==== Breweries of the United States
+. Breweries of the United States
+.. Find all the breweries of the United States.
 
-. Find all the breweries of the United States.
+. Beers in a particular city
+.. Find all the beers & breweries from San Francisco, California.
 
-==== Beers in a particular city
+. Beers with the highest alcohol content
+.. Find the top 10 beers with the highest alcohol content (abv)
 
-. Find all the beers & breweries from San Francisco, California.
+. Beers with the lowest alcohol content
+.. Find the top 10 beers with the lowest alcohol content (abv > 0) 
 
-==== Beers with the highest alcohol content
+. Beers of a certain category
+.. Find all the beers of the category "North American Lager".
 
-. Find the top 10 beers with the highest alcohol content (abv)
-
-==== Beers with the lowest alcohol content
-
-. Find the top 10 beers with the lowest alcohol content (abv > 0) 
-
-==== Beers of a certain category
-
-. Find all the beers of the category "North American Lager".
-
-==== Beers for a particular style and location
-
-. Find all the beers that are brewed in the style "Porter" in the United States.
+. Beers for a particular style and location
+.. Find all the beers that are brewed in the style "Porter" in the United States.
 
 === Schema
 
