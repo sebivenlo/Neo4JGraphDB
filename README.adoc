@@ -11,7 +11,7 @@ Following some short tutorials, you will also get some exercises to complete to 
 == Assignment 1
 
 - Open a terminal
-- execute the following command to an empty Neo4j DB:
+- execute the following command to get an empty Neo4j DB:
 ..................
 docker run \
    --publish=7474:7474 --publish=7687:7687 \
@@ -132,3 +132,47 @@ image::images/beer_schema.png[]
 
 (Brewery) - [:LOC_CITY] → (City) - [:LOC_STATE] → (State) - [:LOC_COUNTRY] → (Country)
 
+== Assignment 3
+
+
+- Open a terminal
+- execute the following command to an empty Neo4j DB:
+..................
+docker run \
+   --publish=7474:7474 --publish=7687:7687 \
+   neo4j:latest
+..................
+- open a browser and go to localhost:7474
+- log in using the new password set in assignment 1
+- There should still be data here, if you do not mind losing this data, execute the following:
+............
+MATCH (n) DETACH DELETE n
+............
+If you do not delete your old data, this will very likely not lead to complications, you should just get more data unrelated to this assignment when looking at the whole graph
+- Execute the following command:
+......
+:play movies
+......
+- Click on the script that shows up in the feed and execute it
+- Show the whole graph and get a little familiar with the data
+
+=== Queries
+
+. Actors that acted together in multiple movies
+.. Find all the actors that acted together in more than one movie
+
+. Amount of movies for Robin Williams co-stars
+.. Find the average amount of movies that actors played in who played in at least one movie with Robin Williams
+
+. Use shortestPath to find actors who like to play together
+.. Using shortestPath, find all actor pairings who played in more than one movie together
+
+. How close are people from "The Green Mile" and "When Harry met Sally"
+.. Find the shortest shortestPath between people who are affiliated with "The Green Mile" and people who are affiliated with "When Harry met Sally"
+
+. Average age of actors who played in movies with Keanu Reeves
+.. Find the average age of all actors who played in movies with Keanu Reeves, using the age that they had when they plaed in the specific movie
+
+=== Schema
+
+No schema this time, try to find the relevant data on your own!
