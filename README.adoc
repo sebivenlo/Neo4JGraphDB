@@ -25,8 +25,7 @@ docker run \
 - Create a new relationship between those two nodes called “LIKES”.
 - Create some friends of type “Person” with a property name that have the relationship “FRIENDS” with your own node. 
 - Find all your friends in the database. 
-- Create a friend of a friend for one of your friends (you->friend->foaf) and make him an expert in your hobby.
-- Find someone in your network who can give you tips for your hobby. 
+- Give at least one friend a hobby.
 
 For help use the cheat sheet (https://github.com/sebivenlo/Neo4JGraphDB/blob/master/cypher_cheat_sheet.pdf).
 
