@@ -72,6 +72,8 @@ docker run --publish=7474:7474 --publish=7687:7687 --volume=(path to current loc
 . Beers for a particular style and location
 .. Find all the beers that are brewed in the style "Porter" in the United States.
 
+For help use the cheat sheet (https://github.com/sebivenlo/Neo4JGraphDB/blob/master/cypher_cheat_sheet.pdf).
+
 === Schema
 
 image::images/beer_schema.png[]
@@ -172,6 +174,8 @@ If you do not delete your old data, this will very likely not lead to complicati
 
 . Average age of actors who played in movies with Keanu Reeves
 .. Find the average age of all actors who played in movies with Keanu Reeves, using the age that they had when they plaed in the specific movie
+
+For help use the cheat sheet (https://github.com/sebivenlo/Neo4JGraphDB/blob/master/cypher_cheat_sheet.pdf).
 
 === Schema
 
