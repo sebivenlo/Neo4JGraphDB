@@ -29,6 +29,41 @@ docker run \
 
 For help use the cheat sheet (https://github.com/sebivenlo/Neo4JGraphDB/blob/master/cypher_cheat_sheet.pdf).
 
+..................
+CREATE 	(:Person {name:"Lucas"})
+..................
+
+..................
+CREATE 	(:Hobby {name:"Reading"})
+..................
+
+..................
+MATCH 	(you:Person {name:"Lucas"})
+MATCH	(hobby:Hobby {name:"Reading"})
+CREATE 	(you)-[:LIKES]->(hobby)
+..................
+
+..................
+MATCH	(you:Person {name:"Lucas"})
+CREATE 	(a:Person {name: "Klaus"}),
+		(b:Person {name: "Sandra"}),
+		(c:Person {name: "Gertrude"}),
+		
+		(you)-[:FRIEND]->(a),
+		(you)-[:FRIEND]->(b),
+		(you)-[:FRIEND]->(c)
+..................
+
+..................
+MATCH	(you:Person {name:"Lucas"})-[:FRIEND]->(friends)
+RETURN	friends.name as name
+..................
+
+..................
+MATCH	(friend:Person {name:"Klaus"})
+CREATE	(hobby:Hobby {name:"Programming"}),
+		(friend)-[:LIKES]->(hobby)
+..................
 
 
 == Assignment 2
@@ -72,6 +107,44 @@ docker run --publish=7474:7474 --publish=7687:7687 --volume=(path to current loc
 .. Find all the beers that are brewed in the style "Porter" in the United States.
 
 For help use the cheat sheet (https://github.com/sebivenlo/Neo4JGraphDB/blob/master/cypher_cheat_sheet.pdf).
+
+..................
+MATCH 	(brewery: Brewery)-[:LOC_CITY]->(city:City)-[:LOC_STATE]->(state:State)-[:LOC_COUNTRY]->(country:Country)
+WHERE	country.country="United States"
+RETURN 	DISTINCT(brewery.name) AS brewery, country.country AS country
+..................
+
+..................
+MATCH 	(beer:Beer) - [:BREWED_AT] -> (brewery: Brewery) - [:LOC_CITY] -> (city:City {city: 'San Francisco'}) - [:LOC_STATE] -> (state:State {state: 'California'})
+RETURN 	DISTINCT(beer.name) AS beer, brewery.name AS brewery, brewery.address1 AS address
+..................
+
+..................
+MATCH 	(beer:Beer) - [:BREWED_AT] -> (brewery: Brewery)
+RETURN 	beer.name AS beer , beer.abv, brewery.name AS brewery, brewery.city AS city, brewery.state AS state , brewery.country AS country
+ORDER BY beer.abv DESC
+LIMIT 10
+..................
+
+..................
+MATCH 	(beer:Beer) - [:BREWED_AT] -> (brewery: Brewery)
+WHERE 	beer.abv > 0
+RETURN 	beer.name AS beer , beer.abv, brewery.name AS brewery, brewery.city AS city, brewery.state AS state , brewery.country AS country
+ORDER BY beer.abv
+LIMIT 10
+..................
+
+..................
+MATCH 	(category:Category {category: "North American Lager"}) <- [:BEER_CATEGORY]- (beer:Beer) - [:BREWED_AT] -> (brewery: Brewery) - [:LOC_CITY] -> (city:City) - [:LOC_STATE] -> (state:State) - [:LOC_COUNTRY] -> (country:Country)
+RETURN 	DISTINCT(beer.name) AS beer, brewery.name AS brewery, city.city AS city, state.state AS state , country.country AS country
+ORDER BY country , beer
+..................
+
+..................
+MATCH (style:Style {style: 'Porter'}) <- [:BEER_STYLE] - (beer:Beer) - [:BREWED_AT] -> (brewery: Brewery) - [:LOC_CITY] -> (city:City) - [:LOC_STATE] -> (state:State) - [:LOC_COUNTRY] -> (country:Country {country:"United States"})
+RETURN DISTINCT(beer.name) AS beer, brewery.name AS brewery, city.city AS city, state.state AS state , country.country AS country
+ORDER BY beer
+..................
 
 === Schema
 
